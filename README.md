@@ -29,5 +29,5 @@ $ kubectl get svc
 NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
 service/xmppsrv      NodePort    10.104.36.105   <none>        5222:30540/TCP   11s
 
-go run example.go -server=192.168.39.206:5222 -notls=true -debug=true
+go run example.go -server=192.168.39.206:30540 -notls=true -debug=true
 ```
