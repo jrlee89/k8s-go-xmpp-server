@@ -1,4 +1,4 @@
-# go xmpp server
+# k8s go xmpp server
 - Very minimal xmpp server k8s deployment.
 - Work in progress.
 - Inspired by https://github.com/mattn/go-xmpp/
@@ -10,9 +10,7 @@ podman login docker.io
 podman build -t docker.io/<YOUR-REPO>/xmppsrv .
 podman push docker.io/<YOUR-REPO>/xmppsrv
 minikube start
-kubectl create deployment xmppsrv --image=jrlee89/xmppsrv \
-	--port=5222 --dry-run=client -o yaml > dep.yaml
-kubectl create -f dep.yaml 
+kubectl create deployment xmppsrv --image=jrlee89/xmppsrv --port=5222 
 kubectl expose deployment xmppsrv --type=NodePort --target-port=5222
 ```
 
